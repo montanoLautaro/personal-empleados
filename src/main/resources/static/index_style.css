@@ -1,0 +1,101 @@
+:root{
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --colorPrimario: #209CB8;
+    --secundario: #9FBBC2 ;
+    --gris: #757575;
+}
+/* GLOBALES */
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;  /*snippet para box model*/
+    scroll-snap-type: y mandatory;  /* agrega un scroll con eje y */
+}
+*, *:before, *:after {
+    box-sizing: inherit;    /*snippet para box model*/
+}
+body{
+    font-size: 16px;
+    font-family: 'Krub', sans-serif;
+    background-image: linear-gradient(to top, #dfe9f3 0%, var(--blanco) 100%); /*degradado de abajo hacia arriba */
+}
+.contenedor{
+    max-width: 120rem;  /*que el ancho sea de 1200px como maximo, sino toma el 100% de la pantalla por default*/
+    margin: 0 auto;
+    /*es lo mismo que
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;*/
+}
+.boton {
+    background-color: var(--colorPrimario);
+    color: var(--blanco);
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;  /*transforma el texto a mayuscula */
+    font-weight: bold;
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    border-radius: .5rem;  /* redondea los bordes */
+    border: none;  /* solo se va a aplicar en el boton de enviar del formulario */
+}
+.boton:hover {
+    cursor: pointer;  /*para que aparezca un cursor diferente, al pasar sobre el boton */
+}
+.sombra{
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(105,100,105,0.56);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(105,100,105,0.56);
+    box-shadow: 0px 5px 15px 0px rgba(105,100,105,0.56);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+/* TIPOGRAFIA */
+h1 {
+    font-size: 3.8rem;
+}
+h2 {
+    font-size: 2.8rem;
+}
+h3 {
+    font-size: 1.8rem;
+}
+h1, h2, h3 {
+    text-align: center;
+}
+/* TITULOS */
+.titulo span{
+    font-size: 2rem;
+}
+/* NAVEGACION PRINCIPAL */
+.nav-bg{
+    background-color: var(--secundario);
+}
+.navegacion-principal{
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width: 768px) {  /*hace que la barra de navegacion se vea bien en celulares o tablets*/
+    .navegacion-principal{
+        flex-direction: row;
+        justify-content: space-between;  /*separa a los enlaces entre si*/
+    }
+}
+.navegacion-principal a{
+    display: block;
+    text-align: center;    /*display block y text-align es para que sea un bloque que tome todo el espacio en celulares*/
+    color: var(--blanco);
+    text-decoration: none; /*saca el subrayado del enlace*/
+    font-size: 2rem;
+    font-weight: bold;   /*negrita*/
+    padding: 1rem;     /* para que no quede delgado cada elemento */
+}
+.navegacion-principal a:hover{
+    background-color: var(--colorPrimario); /* :hover es una pseudoclase para que se resalte cuando
+    paso el mouse por arriba */
+}
+/* FOOTER */
+.footer {
+    text-align: center;
+}
