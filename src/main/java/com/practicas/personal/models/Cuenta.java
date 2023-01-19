@@ -22,10 +22,6 @@ public class Cuenta {
     private Date horaEntrada;
     @Temporal(TemporalType.TIME)
     private Date horaSalida;
-
     private String rol;
-    @OneToOne(cascade = {CascadeType.ALL})
-    @JoinColumn(name = "idPersonal", referencedColumnName = "id")
-    private Personal usuario;
 
 }

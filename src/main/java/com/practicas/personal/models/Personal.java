@@ -18,4 +18,7 @@ public class Personal {
     private Long id;
     private String nombre;
     private String apellido;
+    @OneToOne(cascade = {CascadeType.ALL})
+    @JoinColumn(name = "idPersonal", referencedColumnName = "id")
+    private Cuenta cuenta;
 }
