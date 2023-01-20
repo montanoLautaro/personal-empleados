@@ -8,7 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class  PersonalController {
+public class  PersonalController{
     private final CuentaService cuentaService;
     private final PersonalService personalService;
 
@@ -32,4 +32,14 @@ public class  PersonalController {
         return "registro";
     }
 
+    @GetMapping("/login/lista_admin")
+    public String listarPersonalAdmin(Model modelo){
+        modelo.addAttribute("personal", personalService.listarPersonal());
+        return "lista_admin";
+    }
+    @GetMapping("/login/lista_user")
+    public String listarPersonalUser(Model modelo){
+        modelo.addAttribute("personal", personalService.listarPersonal());
+        return "lista_user";
+    }
 }
