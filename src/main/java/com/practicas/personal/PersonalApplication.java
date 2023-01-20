@@ -11,13 +11,7 @@ import org.springframework.context.ApplicationContext;
 public class PersonalApplication {
 
 	public static void main(String[] args) {
-		ApplicationContext context = SpringApplication.run(PersonalApplication.class, args);
-		PersonalServiceImp imp = context.getBean(PersonalServiceImp.class);
-
-		Cuenta cuenta1 = new Cuenta();
-		imp.guardarPersonal(new Personal(null,"admin","admin",cuenta1));
-
-
+		SpringApplication.run(PersonalApplication.class, args);
 	}
 
 }

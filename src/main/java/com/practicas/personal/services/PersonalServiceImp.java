@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 @Service
 public class PersonalServiceImp implements PersonalService{
-    private PersonalRepository personalRepository;
+    private final PersonalRepository personalRepository;
 
     public PersonalServiceImp(PersonalRepository personalRepository) {
         this.personalRepository = personalRepository;

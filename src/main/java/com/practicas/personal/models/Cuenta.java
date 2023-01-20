@@ -22,6 +22,5 @@ public class Cuenta {
     private Date horaEntrada;
     @Temporal(TemporalType.TIME)
     private Date horaSalida;
-    private String rol;
 
 }

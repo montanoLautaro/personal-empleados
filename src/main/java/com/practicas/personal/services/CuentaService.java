@@ -5,9 +5,9 @@ import com.practicas.personal.models.Cuenta;
 import java.util.List;
 
 public interface CuentaService {
-    public List<Cuenta>listarCuentas();
-    public Cuenta guardarCuenta(Cuenta cuenta);
-    public Cuenta obtenerCuentaPorId(Long id);
-    public Cuenta actualizarPersona(Cuenta cuenta);
-    public void eliminarCuenta(Long id);
+    List<Cuenta>listarCuentas();
+    Cuenta guardarCuenta(Cuenta cuenta);
+    Cuenta obtenerCuentaPorId(Long id);
+    Cuenta actualizarPersona(Cuenta cuenta);
+    void eliminarCuenta(Long id);
 }

@@ -18,7 +18,17 @@ public class Personal {
     private Long id;
     private String nombre;
     private String apellido;
-    @OneToOne(cascade = {CascadeType.ALL})
-    @JoinColumn(name = "idPersonal", referencedColumnName = "id")
+    private String username;
+    private String password;
+    private String rol;
+    @OneToOne
     private Cuenta cuenta;
+
+    public Personal(String nombre, String apellido, String username, String password, String rol) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.username = username;
+        this.password = password;
+        this.rol = rol;
+    }
 }
