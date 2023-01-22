@@ -29,6 +29,5 @@ public class Personal {
         this.apellido = apellido;
         this.username = username;
         this.password = password;
-        this.rol = rol;
     }
 }

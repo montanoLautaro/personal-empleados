@@ -37,4 +37,20 @@ public class PersonalServiceImp implements PersonalService{
     public void eliminarCuenta(Long id) {
         personalRepository.deleteById(id);
     }
+
+    //NUEVA IMPL
+    @Override
+    public boolean checkUser(Personal personal) {
+        boolean band = false;
+        List<Personal> list = listarPersonal();
+        for (Personal aux: list){
+            if (aux.getUsername().equals(personal.getUsername())){
+                band = true;
+            }else {
+                band = false;
+            }
+        }
+        return band;
+    }
+
 }

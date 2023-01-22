@@ -11,4 +11,8 @@ public interface PersonalService {
     Personal obtenerPersonalPorId(Long id);
     Personal actualizarPersonal(Personal personal);
     void eliminarCuenta(Long id);
+
+    //NUEVA checkUser
+    boolean checkUser(Personal personal);
+
 }

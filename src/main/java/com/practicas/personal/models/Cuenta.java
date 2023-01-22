@@ -23,4 +23,8 @@ public class Cuenta {
     @Temporal(TemporalType.TIME)
     private Date horaSalida;
 
+    public Cuenta(Date horaEntrada, Date horaSalida) {
+        this.horaEntrada = horaEntrada;
+        this.horaSalida = horaSalida;
+    }
 }
